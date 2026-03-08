@@ -2,285 +2,172 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useParams } from 'next/navigation';
-import { useState, useEffect } from 'react'; // Added for hydration fix
+import { useState, useEffect } from 'react';
 
-const page = () => {
+const Page = () => {
   const { id } = useParams();
-  const [mounted, setMounted] = useState(false); // Added to prevent hydration mismatch
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true); // Set to true after component mounts
+    setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return null; // Prevent rendering on server to avoid hydration issues
-  }
+  if (!mounted) return null;
 
   let product;
   if (id === "1") {
     product = {
-      Focused: '🌸 Keep scrolling — see why everyone is buying this pipe cleaner flower kit and get yours today!',
-      Heading: `🌸What You Will Love about Having This Set of Pipe Cleaners`,
-      Text1: `If you like to make things with your hands, or if you need to find something to do without electronics that is also fun for your children, then you will really enjoy this pipe cleaner set. There are 500 pipe cleaners in a package, so you will never feel like you are “saving” any materials. You can create and experiment, be able to get to know what you like and don’t like, and try different things without worrying about running out of your supply (the pipe cleaners) to experiment with!
-
-These pipe cleaners are very soft, they are colourful, and they are very flexible (able to be bent and twisted), so they make it easy and relaxing to create anything. Use these pipe cleaners to decorate your home, complete a project for your child’s school, or as a creative hobby (endless ideas) without needing tools or specialty skills necessary.
-
-Another great thing about the pipe cleaners is that you only have to buy them once, and you will continue using them time after time for different ideas, seasons and projects.
-
-`,
-      Handmade: '/handmade.png',
-      pipecleaner: '/pipecleaner.png',
-      Benefits: '🌼Benefits That You Will Actually See',
-      BeDescription: `Crafting is Easy!
-You do not have to be an expert at crafting; You just need to be able to twist and bend!
-
-A great Crafting Tool for Kids & Adults
-Kids love the vibrant colors and the soft texture. Adults enjoy how therapeutic and stress-free it is to create.
-
-Creative Crafting on a Budget! There are many different types of flowers, decorations that you can use to create crafts that will be affordable!`,
-      Usage: '🌼 How Easy It Is To Use Them',
-      Using: `It will take you no more than a few minutes to create one of these pipe cleaner flowers. Twist it and shape it, and there is nothing else. No directions will need to be followed and you won't even feel the pressure from trying to make it look a certain way or "perfect." Each flower you make will come out unique - that why it looks even better.
-`,
-      Tip: '💡 Genuine Tip',
-      Tipdes: 'These crafts are at their best when you stop trying to create "perfect" crafts. Combine colours, let yourself be creative and have fun. The charm of these crafts is that every hand made item has been created uniquely!',
-      title: 'Pipe Cleaner Flower ',
-      toptitle:'Pipe Cleaner Flower Everyone Is Making Right Now',
-      subtitle:'Trending DIY Craft Kit On Pinterest-Simple,Creative & Beginner Friendly',
-      Trust:'Perfect For Kids, Beginners & Creative Home Decor',
-      guide:'👇ScrollDown To see Why This Simple Craft Is Going Viral And How You Can Make It Too',
-      description: '500Pcs Pipe Cleaners Twisting Sticks Soft Chenille Rods for DIY Craft Handmade Flowers, Kids Floral Decor Pipe Cleaner, Home Decor in Just',
+      themeColor: "text-pink-600",
+      bgColor: "bg-pink-50",
+      buttonColor: "bg-pink-500 hover:bg-pink-600",
+      toptitle: '🌸 Pipe Cleaner Flower Everyone Is Making Right Now',
+      subtitle: 'Trending DIY Craft Kit On Pinterest — Simple & Creative',
+      Trust: 'Perfect For Kids, Beginners & Creative Home Decor',
+      guide: '👇 Scroll Down To See Why This Is Going Viral',
+      title: 'Pipe Cleaner Flower Kit',
+      description: '500Pcs Soft Chenille Rods for DIY Craft Handmade Flowers. Create beautiful, everlasting floral decor in minutes!',
       image: '/pin1.png',
-      buySubHead: 'To Make Your MindBlowng Craft In Reality ',
-      mbsubhead: 'To Make Your Creative Craft  ',
-      click: ' Click Down To Get',
       arrowImg: '/arrow.png',
       price: 'USD 29.52',
+      pricekyneechy: 'Affordable DIY Craft Loved On Pinterest',
       buylink: 'https://s.click.aliexpress.com/e/_c3quTinH',
-      beginnerfreindly :'Beginner friendly . No signup required',
-      pricekyneechy:'Affordable DIY Craft Loved On Pinterest',
-    }
-  } else if (id === "2") {
-    product = {
-      title: 'Tannig Oil Applicator',
-      description: '1Pcs Tanning Oil Painting Tool Brown Back Beautify Belt Self-Tanning Applicator Back Massage Strap Lotion Wiping Tool Just in',
-      image: '/pin2.png',
-      buySubHead: 'To Make Your Tan Oil Fully Absorbed',
-      click: 'Click Down To Get',
-      arrowImg: '/arrow.png',
-      price: 'USD 7.36',
-      buylink: 'https://s.click.aliexpress.com/e/_c3t43uMP'
-    }
-  }
+      beginnerfreindly: 'Beginner friendly. No signup required',
+      Heading: '🌸 What You Will Love About This Set',
+      Text1: `If you like to make things with your hands, this is for you. It's the perfect electronics-free hobby for adults and kids alike. 500 pieces means endless creativity without worrying about running out!`,
+      Handmade: '/handmade.png',
+      Focused: '🌸 Keep scrolling — get your kit today!',
+      Benefits: '🌼 Benefits That You Will Actually See',
+      BeDescription: `• Crafting is Easy: Just twist and bend!\n• Stress-Free: A therapeutic way to unwind.\n• Budget Friendly: High-impact decor for a low price.`,
+      Usage: '🌼 How Easy It Is To Use',
+      Using: `Twist it and shape it—that is it. No complex directions. Every flower you make is unique and beautiful in its own way.`,
+      pipecleaner: '/pipecleaner.png',
+      Tip: '💡 Genuine Tip',
+      Tipdes: 'Stop trying to make it "perfect." The charm is in the unique, handmade look!',
+    };
+ } else if (id === "2") {
+  product = {
+    // Original Eye-Catching Theme
+    themeColor: "text-amber-800",
+    bgColor: "bg-orange-50", 
+    buttonColor: "bg-orange-600 hover:bg-orange-700 shadow-xl shadow-orange-200",
+    
+    // Header Section - Warm & Sun-Drenched
+    toptitle: '☀️ Capture the Golden Hour: A Flawless Glow from Every Angle',
+    subtitle: 'Infuse your skin with that sun-kissed citrus energy—no missed spots.',
+    Trust: 'Crafted for the independent soul who loves a warm, radiant finish.',
+    guide: '👇 Scroll to see how this simple ritual brings the sunset to your skin',
+    
+    // Main Product Details
+    title: 'The "Sun-Drenched" Back Applicator',
+    description: 'Wrap yourself in the warmth of a perfect tan. This velvety-soft orange-hued helper glides across your back like honey, ensuring your favorite oil blends into a seamless, vibrant glow.',
+    image: '/pin2.png',
+    arrowImg: '/arrow.png', 
+    price: 'USD 7.36',
+    pricekyneechy: 'A small price for a boost of pure, golden confidence.',
+    buylink: 'https://s.click.aliexpress.com/e/_c3t43uMP',
+    beginnerfreindly: 'Supple, gentle, and made to last through every sun-filled summer.',
+    
+    // Detailed Content Section - The "Heart" of the Glow
+    Heading: '🍊 The Bright Freedom of a Solo Glow',
+    Text1: `We’ve all felt that frustration—trying to reach the center of our back and ending up with a "tanning fail." We believe your self-care ritual should be as bright and energizing as a summer morning. 
+
+This applicator was born to give you that citrus-bright confidence. The material is a soft, premium flocking that feels like a warm embrace. It doesn't just apply product; it pampers your skin, leaving a golden, radiant finish that looks like you just spent a long afternoon basking in the Mediterranean sun. It’s about more than just a tan; it’s about feeling vibrant, solo, and completely in control of your glow.`,
+    
+    Handmade: '/pin2.png', 
+    Focused: '🍊 Don’t let a missed spot dim your light. Own the glow today.',
+    
+    Benefits: '✨ Why You’ll Love This Golden Ritual',
+    BeDescription: `• Solo Tanning Independence: Reach every inch with vibrant ease.
+• Velvet-Soft Touch: A luxurious texture that pampers your skin.
+• Travel-Ready Energy: Lightweight, portable, and ready for the beach.
+• Versatile Sun-Care: Perfect for tanning oils, rich lotions, or a soothing massage.`,
+    
+    Usage: '🧖 Your 2-Minute Golden Ritual',
+    Using: `It's as refreshing as a splash of cold water. Apply a few drops of your favorite oil to the center of the strap. Take the handles, reach back, and use a rhythmic "sawing" motion. In just two minutes, you’re perfectly blended, sun-kissed, and ready to shine.`,
+    
+    pipecleader: '/pin2.png', 
+    Tip: '💡 A Bright Pro-Tip',
+    Tipdes: 'For a truly luminous tan, exfoliate with a citrus scrub the night before. It wakes up your skin and lets your new golden glow sink in deeper for a longer-lasting, more vibrant finish!',
+  };
+}
+  if (!product) return <div className="text-center mt-20">Product not found.</div>;
 
   return (
-    <main className="overflow-x-hidden overflow-y-hidden" style={{ scrollBehavior: 'smooth' }}> 
-        <motion.div
-          className="w-[100vw] md:h-[15vh] h-[25vh]  flex justify-center items-end "
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="text-2xl text-white   [text-shadow:_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000,_2px_2px_0_#000] rounded-lg text-center">
-            {product.toptitle}
-          </h1>
-        </motion.div>
-          <motion.div
-            className="w-[100vw] md:h-[5vh] h-[15vh] flex justify-center items-end "
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-          <h1 className="text-2xl  text-[#666666] border border-b-0 rounded-lg p-1 no-bungee text-center ">
-            {product.subtitle}
-          </h1>
-        </motion.div>
-          <motion.div
-            className="w-[100vw] md:h-[4vh] h-[14vh]  flex justify-center items-end "
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-          <h1 className="text-xl  text-[#666666] no-bungee text-center">
-            {product.Trust}
-          </h1>
-        </motion.div>
-          <motion.div
-            className="w-[100vw] md:h-[20vh] h-[38vh] flex justify-end  items-center flex-col "
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-          <h1 className="text-2xl  text-white font-bold no-bungee bg-black rounded-lg p-1 text-center  ">
-            {product.guide}
-          </h1>
-          <Image
-          src={product.arrowImg}
-           height={100}
-            width={100}
-            alt="Arrow Mark"
-          />
-        </motion.div>
-     <motion.div
-        className="md:h-[80vh] h-[145vh] w-full flex flex-col md:flex-row"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-    
-        <motion.div
-          className="md:h-[55vh] md:w-1/2 flex items-center justify-center pl-20 pr-20 pt-25"
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <Image
-            src={product.image}
-            height={350}
-            width={350}
-            alt={product.title}
-            className="object-cover rounded-xl"
-          />
-        </motion.div>
-        <motion.div
-          className="mt-10 md:mt-0 md:h-[69vh] md:w-1/2 flex flex-col md:items-start items-center justify-center"
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <h1 className="text-xl border p-1 rounded-lg border-b-0 flex">{product.title}</h1>
-          <h2 className=" md:w-[28vw] md:mt-10 mt-5 md:text-xl text-[#666666] border border-t-0 border-b-0 rounded-lg text-center">
-            {product.description}
-          </h2>
-          <h3 className="w-1/2 flex justify-center md:ml-5 mt-2 border border-t-0 rounded-lg text-lg">
-            {product.price}
-          </h3>
-          <h4 className="text-black no-bungee w-1/2 flex justify-center ml-5 items-center">
-            {product.pricekyneechy}
-          </h4>
-          <h5 className="md:mt-15 md:text-white md:bg-black rounded-lg hidden md:flex">
-            {product.buySubHead}
-          </h5>
-          <h6 className="md:hidden flex mt-3 bg-black text-white rounded-lg">
-            {product.mbsubhead}
-          </h6>
-          <p className="md:w-1/2 flex justify-center mt-5">{product.click}</p>
-          <Image
-            src={product.arrowImg}
-            height={100}
-            width={100}
-            alt="Arrow Mark"
-            className="object-cover flex md:ml-32"
-          />
-          <div className="w-1/2 flex justify-center flex-col ">
-            <a
-              href={product.buylink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-center text-white text-lg bg-blue-500 p-2 rounded-lg hover:bg-blue-300 hover:text-black ml-2"
-            >
-              Buy Now
-            </a>
-            <p className="no-bungee flex justify-center items-center">
-              {product.beginnerfreindly}
-            </p>
-          </div>
-        </motion.div>
+    <main className={`overflow-x-hidden ${product.bgColor}`} style={{ scrollBehavior: 'smooth' }}>
+      {/* Header */}
+      <motion.div className="w-full md:h-[15vh] h-[25vh] flex justify-center items-end" initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }}>
+        <h1 className="text-2xl text-white [text-shadow:_-2px_-2px_0_#000,2px_-2px_0_#000,-2px_2px_0_#000,2px_2px_0_#000] text-center px-4 font-bold">
+          {product.toptitle}
+        </h1>
       </motion.div>
-      <section className="md:h-[170vh] h-[400vh] ">
-        <motion.div
-          className="w-[100vw] md:h-[5vh] h-[2vh] flex justify-center items-end p-5 pb-0 md:p-0 text-center" 
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="text-2xl">{product.Heading}</h1>
-        </motion.div>
-        <motion.div
-          className="md:w-[95vw] md:mt-5 md:ml-7 rounded-lg md:text-center flex md:flex-row flex-col"
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="m-2 md:m-0 md:w-[50vw] md:h-[50vh] p-6 border md:border-r-0 rounded-lg flex">
-            <p className="no-bungee text-lg">{product.Text1}</p>
-          </div>
-          <div className="md:w-[50vw] flex">
-            <Image
-              src={product.Handmade}
-              height={650}
-              width={650}
-              alt="Craft Image"
-              className="flex justify-center items-center"
-            />
-          </div>
-        </motion.div>
-        <motion.div
-          className="md:h-[8vh] md:w-[100vw] flex justify-center items-center m-5"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <h1 className="text-white bg-black rounded-lg md:text-lg">{product.Focused}</h1>
-        </motion.div>
-        {/* benefits */}
-        <motion.div
-          className="w-[100vw] md:h-[8vh] h-[15vh] flex justify-center items-end p-5 pb-0 md:p-0"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <h1 className="text-2xl">{product.Benefits}</h1>
-        </motion.div>
-        <motion.div
-          className="flex p-5 flex justify-center items-center mt-5"
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <p className="w-[90vw] border border-b-0 rounded-lg p-2 no-bungee">{product.BeDescription}</p>
-        </motion.div>
-        {/* usage */}
-        <motion.div
-          className="flex w-[100vw] md:h-[10vh] h-[15vh] flex justify-center items-end p-5 pb-0 md:p-0"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <h1 className="text-2xl">{product.Usage}</h1>
-        </motion.div>
-        <motion.div
-          className="md:w-[95vw] md:mt-5 md:ml-7 rounded-lg md:text-center flex md:flex-row flex-col"
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-        >
-          <div className="m-2 md:m-0 md:w-[50vw] md:h-[46vh] border-b-0 p-5 border md:border-r-0 rounded-lg flex justify-center items-center">
-            <p className="no-bungee text-lg">{product.Using}</p>
-          </div>
-          <div className="md:w-[50vw] flex">
-            <Image
-              src={product.pipecleaner}
-              height={650}
-              width={650}
-              alt="Craft Image"
-              className="flex justify-center items-center rounded-xl p-4 md:p-0"
-            />
-          </div>
-        </motion.div>
-        {/* tip */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <h1 className="mt-10 ml-10 mb-2 text-2xl">{product.Tip}</h1>
-          <p className="no-bungee w-[90vw] flex ml-10">{product.Tipdes}</p>
-        </motion.div>
-      </section>
 
-     
+      <div className="flex flex-col items-center">
+        <h2 className={`text-2xl ${product.themeColor} border-2 border-black/10 rounded-lg p-2 text-center mt-5 mx-4 bg-white/50`}>
+          {product.subtitle}
+        </h2>
+        <p className="text-xl text-gray-600 text-center mt-2 px-4 italic">{product.Trust}</p>
+      </div>
+
+      {/* Guide & Arrow */}
+      <motion.div className="w-full flex flex-col items-center mt-10">
+        <h1 className="text-2xl text-white font-bold bg-black rounded-lg p-3 text-center mx-4">
+          {product.guide}
+        </h1>
+        {product.arrowImg && (
+          <Image src={product.arrowImg} height={80} width={80} alt="Arrow" className="mt-2" />
+        )}
+      </motion.div>
+
+      {/* Main Product Section */}
+      <div className="md:min-h-[80vh] w-full flex flex-col md:flex-row items-center justify-center p-5 gap-10">
+        <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} className="md:w-1/2 flex justify-center">
+          {product.image && (
+            <Image src={product.image} height={400} width={400} alt={product.title} className="object-cover rounded-3xl shadow-2xl border-4 border-white" priority />
+          )}
+        </motion.div>
+        
+        <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} className="md:w-1/2 flex flex-col items-center md:items-start">
+          <h1 className={`text-3xl font-bold ${product.themeColor}`}>{product.title}</h1>
+          <p className="md:w-[30vw] text-center md:text-left text-gray-700 mt-5 text-lg leading-relaxed">{product.description}</p>
+          <h3 className="text-3xl font-black mt-4 text-black">{product.price}</h3>
+          
+          <div className="mt-8 flex flex-col items-center md:items-start w-full">
+            <a href={product.buylink} target="_blank" rel="noopener noreferrer" className={`${product.buttonColor} text-white px-12 py-4 rounded-full text-xl font-bold shadow-lg transition-all transform hover:scale-105`}>
+              Get Yours Now
+            </a>
+            <p className="text-sm mt-4 text-gray-500 font-medium">{product.beginnerfreindly}</p>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Detail Section */}
+      <section className="p-5 md:p-20 bg-white/40 rounded-t-[50px] mt-20 shadow-inner">
+        <h2 className={`text-4xl font-bold text-center mb-12 ${product.themeColor}`}>{product.Heading}</h2>
+        <div className="flex flex-col md:flex-row gap-12 items-center max-w-6xl mx-auto">
+          <div className="md:w-1/2 bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+            <p className="whitespace-pre-line text-lg leading-relaxed text-gray-800">{product.Text1}</p>
+          </div>
+          <div className="md:w-1/2">
+            {product.Handmade && <Image src={product.Handmade} width={550} height={400} alt="Detail" className="rounded-3xl shadow-2xl" />}
+          </div>
+        </div>
+        
+        {/* Benefits Box */}
+        <div className="mt-24 max-w-4xl mx-auto">
+           <h2 className={`text-3xl font-bold text-center mb-8 ${product.themeColor}`}>{product.Benefits}</h2>
+           <div className={`border-2 border-dashed border-black/20 rounded-3xl p-8 bg-white/60`}>
+              <p className="whitespace-pre-line text-xl leading-loose text-gray-700 font-medium">{product.BeDescription}</p>
+           </div>
+        </div>
+
+        {/* Tip Box */}
+        <div className="mt-20 p-8 bg-black text-white rounded-3xl max-w-2xl mx-auto text-center shadow-2xl">
+           <h3 className="text-2xl font-bold mb-4">{product.Tip}</h3>
+           <p className="text-lg opacity-90">{product.Tipdes}</p>
+        </div>
+      </section>
     </main>
   );
 };
 
-export default page;
+export default Page;
