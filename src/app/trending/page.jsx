@@ -3,7 +3,8 @@ import Link from "next/link"
 const page = () => {
   const images = [
     "/pin1.png",
-    '/pin2.png'
+    '/pin2.png',
+     '/pin3.png'
   ]
   return (
     <div className="h-[100vh]">

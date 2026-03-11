@@ -44,52 +44,76 @@ const Page = () => {
       Tip: '💡 Genuine Tip',
       Tipdes: 'Stop trying to make it "perfect." The charm is in the unique, handmade look!',
     };
- } else if (id === "2") {
-  product = {
-    // Original Eye-Catching Theme
-    themeColor: "text-amber-800",
-    bgColor: "bg-orange-50", 
-    buttonColor: "bg-orange-600 hover:bg-orange-700 shadow-xl shadow-orange-200",
-    
-    // Header Section - Warm & Sun-Drenched
-    toptitle: '☀️ Capture the Golden Hour: A Flawless Glow from Every Angle',
-    subtitle: 'Infuse your skin with that sun-kissed citrus energy—no missed spots.',
-    Trust: 'Crafted for the independent soul who loves a warm, radiant finish.',
-    guide: '👇 Scroll to see how this simple ritual brings the sunset to your skin',
-    
-    // Main Product Details
-    title: 'The "Sun-Drenched" Back Applicator',
-    description: 'Wrap yourself in the warmth of a perfect tan. This velvety-soft orange-hued helper glides across your back like honey, ensuring your favorite oil blends into a seamless, vibrant glow.',
-    image: '/pin2.png',
-    arrowImg: '/arrow.png', 
-    price: 'USD 7.36',
-    pricekyneechy: 'A small price for a boost of pure, golden confidence.',
-    buylink: 'https://s.click.aliexpress.com/e/_c3t43uMP',
-    beginnerfreindly: 'Supple, gentle, and made to last through every sun-filled summer.',
-    
-    // Detailed Content Section - The "Heart" of the Glow
-    Heading: '🍊 The Bright Freedom of a Solo Glow',
-    Text1: `We’ve all felt that frustration—trying to reach the center of our back and ending up with a "tanning fail." We believe your self-care ritual should be as bright and energizing as a summer morning. 
+  } else if (id === "2") {
+    product = {
+      themeColor: "text-amber-800",
+      bgColor: "bg-orange-50",
+      buttonColor: "bg-orange-600 hover:bg-orange-700 shadow-xl shadow-orange-200",
+      toptitle: '☀️ Capture the Golden Hour: A Flawless Glow from Every Angle',
+      subtitle: 'Infuse your skin with that sun-kissed citrus energy—no missed spots.',
+      Trust: 'Crafted for the independent soul who loves a warm, radiant finish.',
+      guide: '👇 Scroll to see how this simple ritual brings the sunset to your skin',
+      title: 'The "Sun-Drenched" Back Applicator',
+      description: 'Wrap yourself in the warmth of a perfect tan. This velvety-soft orange-hued helper glides across your back like honey, ensuring your favorite oil blends into a seamless, vibrant glow.',
+      image: '/pin2.png',
+      arrowImg: '/arrow.png',
+      price: 'USD 7.36',
+      pricekyneechy: 'A small price for a boost of pure, golden confidence.',
+      buylink: 'https://s.click.aliexpress.com/e/_c3t43uMP',
+      beginnerfreindly: 'Supple, gentle, and made to last through every sun-filled summer.',
+      Heading: '🍊 The Bright Freedom of a Solo Glow',
+      Text1: `We’ve all felt that frustration—trying to reach the center of our back and ending up with a "tanning fail." We believe your self-care ritual should be as bright and energizing as a summer morning. This applicator was born to give you that citrus-bright confidence.`,
+      Handmade: '/pin2.png',
+      Focused: '🍊 Don’t let a missed spot dim your light. Own the glow today.',
+      Benefits: '✨ Why You’ll Love This Golden Ritual',
+      BeDescription: `• Solo Tanning Independence: Reach every inch with vibrant ease.\n• Velvet-Soft Touch: A luxurious texture that pampers your skin.\n• Travel-Ready Energy: Lightweight, portable, and ready for the beach.`,
+      Usage: '🧖 Your 2-Minute Golden Ritual',
+      Using: `Apply a few drops of your favorite oil to the center of the strap. Use a rhythmic "sawing" motion. In just two minutes, you’re perfectly blended.`,
+      pipecleaner: '/pin2.png',
+      Tip: '💡 A Bright Pro-Tip',
+      Tipdes: 'For a truly luminous tan, exfoliate with a citrus scrub the night before!',
+    };
+} else if (id === "3") {
+    product = {
+      themeColor: "text-blue-800",
+      bgColor: "bg-gradient-to-b from-cyan-50 to-white",
+      buttonColor: "bg-blue-600 hover:bg-blue-700 shadow-xl shadow-blue-200",
+      
+      toptitle: '🌊 Imagine: A Crystal Clear Pool That Lights Up The Night',
+      subtitle: 'The 2-in-1 Solar Pool Oasis — Because You Deserve a Break',
+      Trust: 'No more manual scrubbing. Just pure, glowing relaxation.',
+      guide: '👇 See why this is the only pool accessory you actually need',
+      
+      title: 'Solar Pool Ionizer & Glow-Floater',
+      description: 'Let’s be honest: pool maintenance is a chore. We designed this solar-powered helper to take the "work" out of "pool work." It cleans by day and throws a private light party by night.',
+      image: '/pin3.png', 
+      arrowImg: '/arrow.png', 
+      price: 'USD 0.99', 
+      pricekyneechy: 'An investment in your peace of mind (and your backyard vibe).',
+      buylink: 'https://s.click.aliexpress.com/e/_c3FnR5Wf',
+      beginnerfreindly: 'Truly "Set it and Forget it." No wires, no batteries, no stress.',
+      
+      Heading: '💎 Your Pool, But Way More Magical',
+      Text1: `We’ve all been there—standing over the pool with a skimmer, wishing the water just stayed clear on its own. 
 
-This applicator was born to give you that citrus-bright confidence. The material is a soft, premium flocking that feels like a warm embrace. It doesn't just apply product; it pampers your skin, leaving a golden, radiant finish that looks like you just spent a long afternoon basking in the Mediterranean sun. It’s about more than just a tan; it’s about feeling vibrant, solo, and completely in control of your glow.`,
-    
-    Handmade: '/pin2.png', 
-    Focused: '🍊 Don’t let a missed spot dim your light. Own the glow today.',
-    
-    Benefits: '✨ Why You’ll Love This Golden Ritual',
-    BeDescription: `• Solo Tanning Independence: Reach every inch with vibrant ease.
-• Velvet-Soft Touch: A luxurious texture that pampers your skin.
-• Travel-Ready Energy: Lightweight, portable, and ready for the beach.
-• Versatile Sun-Care: Perfect for tanning oils, rich lotions, or a soothing massage.`,
-    
-    Usage: '🧖 Your 2-Minute Golden Ritual',
-    Using: `It's as refreshing as a splash of cold water. Apply a few drops of your favorite oil to the center of the strap. Take the handles, reach back, and use a rhythmic "sawing" motion. In just two minutes, you’re perfectly blended, sun-kissed, and ready to shine.`,
-    
-    pipecleader: '/pin2.png', 
-    Tip: '💡 A Bright Pro-Tip',
-    Tipdes: 'For a truly luminous tan, exfoliate with a citrus scrub the night before. It wakes up your skin and lets your new golden glow sink in deeper for a longer-lasting, more vibrant finish!',
-  };
-}
+This little floater is our way of giving you your weekends back. Made from tough, high-grade ABS, it’s built to handle those long, hot summer days. While you’re inside enjoying the AC, it’s out there using the sun’s energy to keep your water sparkling and hygienic. 
+
+But the best part? When the sun sets, it doesn't stop working. It transforms your pool into a glowing oasis with color-changing LEDs. It turns a regular evening into a luxury resort experience, right in your own backyard. It’s eco-friendly, energy-smart, and honestly, just really cool to look at.`,
+      
+      Handmade: '/pin3.png', 
+      Focused: '💎 Stop cleaning. Start swimming. Grab yours today.',
+      
+      Benefits: '✨ Why You’ll Fall In Love With It',
+      BeDescription: `• Work-Life Balance: It sanitizes while you relax.\n• Zero Effort: Solar-powered so you never have to plug it in.\n• Touched by Light: 12–16 hours of beautiful RGB colors every night.\n• Built to Last: IP68 waterproof means it loves being in the water.\n• Fits Your Routine: Holds up to 3-inch tablets for long-lasting care.`,
+      
+      Usage: '🌊 The Easiest Setup Ever',
+      Using: `If you can open a jar, you can use this. Just unscrew the base, pop in your chlorine tablets, and let it drift. It automatically knows when to charge and when to glow. It’s like having a tiny, glowing pool boy that never takes a day off.`,
+      
+      pipecleaner: '/pin3.png', 
+      Tip: '💡 A Friendly Insider Tip',
+      Tipdes: 'The sun is its best friend! Place it in the sunniest spot of your pool during the day to ensure those lights stay bright and vibrant all through the night.',
+    };
+  }
   if (!product) return <div className="text-center mt-20">Product not found.</div>;
 
   return (
